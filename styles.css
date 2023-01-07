@@ -1,6 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 :root {
@@ -25,7 +29,7 @@ main {
     display: grid;
     justify-content: center;
     text-align: center;
-    gap: 6.5em;
+    gap: 6em;
 }
 
 section {
@@ -80,6 +84,11 @@ button {
     width: 225px;
 }
 
+.banner_button {
+    display: flex;
+    gap: 1em;
+}
+
 #iOS_button {
     background-color: var(--Strong__cyan);
 }
@@ -96,12 +105,11 @@ button {
 
 .product_details {
     text-align: left;
-    margin: 0 5em;
+    margin: 0 1em;
 }
 
 .product_details li {
     margin: 3em auto;
-    margin-right: 5em;
 }
 
 .product_features_list{
@@ -141,6 +149,7 @@ footer {
     background-color: lightgray;
     display: grid;
     justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr 2fr 1fr;
     text-align: left;
     padding: 1em;
@@ -174,15 +183,23 @@ footer ul {
 }
 
 @media screen and (max-width: 600px) {
+
     body {
         background-image: url(images/bg-header-mobile.png);
         background-size: contain;
     }
-
+    
     section {
         display: grid;
         place-content: center;
-        width: 350px
+        width: 350px;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
 
     .banner_button {
@@ -196,16 +213,7 @@ footer ul {
     }
 
     .product_features ul {
-        display: grid;
-        place-content: center;
-        width: 350px;
-        gap: 3em;
-        padding-top: 3em;
         text-align: center;
-    }
-
-    .product_details li {
-        margin: 0;
     }
 
     .product_features img{
@@ -214,11 +222,6 @@ footer ul {
     
     #devices_img img {
         width: 325px;
-    }
-    
-    ul {
-        display: flex;
-        flex-direction: column;
     }
 
     .product_features_list ul{
@@ -260,8 +263,6 @@ footer ul {
 
 @media screen and (min-width:600px) and (max-width:1200px) {
 
-    body {
-    }
     .product_features {
         display: flex;
         flex-direction: column;
