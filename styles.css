@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Strong__cyan: hsl(171, 66%, 44%);
+    --light__blue: hsl(233, 100%, 69%);
+    --dark__grayish__blue: hsl(210, 10%, 33%);
+    --grayish__blue: hsl(201, 11%, 66%);
+}
+
+html {
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-image: url(images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: 6.5em;
+}
+
+section {
+    display: grid;
+    gap: 1em;
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+p {
+    color: var(--grayish__blue);
+    font-weight: 400;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.banner {
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.banner img {
+    width: 125px;
+    height: 125px;
+}
+
+.banner article {
+    display: grid;
+    gap: .5em;
+    max-width: 600px;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    font-weight: 400;
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 2em;
+    border: none;
+    width: 225px;
+}
+
+#iOS_button {
+    background-color: var(--Strong__cyan);
+}
+
+#mac_button {
+    background-color: var(--light__blue);
+}
+
+.product_features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.product_details {
+    text-align: left;
+    margin: 0 5em;
+}
+
+.product_details li {
+    margin: 3em auto;
+    margin-right: 5em;
+}
+
+.product_features_list{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product_features_list ul{
+    display: flex;
+    column-gap: 1em;
+}
+
+.product_features_list li{
+    max-width: 350px;
+    display: grid;
+    gap: 1em;
+}
+
+.product_features_list img{
+    margin: 0 auto;
+}
+
+.product_company_logos {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 5em;
+}
+
+.product_company_logos ul {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 5em;
+}
+
+footer {
+    background-color: lightgray;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: left;
+    padding: 1em;
+    color: var(--dark__grayish__blue);
+    margin-top: 10em;
+}
+
+.logo_main {
+    margin-left: 7em;
+    width: 50px;
+    height: 50px;
+}
+
+footer .footer_links {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer_icons {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-image: url(images/bg-header-mobile.png);
+        background-size: contain;
+    }
+
+    section {
+        display: grid;
+        place-content: center;
+        width: 350px
+    }
+
+    .banner_button {
+        display: grid;
+        gap: 1em;
+    }
+
+    .product_features {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product_features ul {
+        display: grid;
+        place-content: center;
+        width: 350px;
+        gap: 3em;
+        padding-top: 3em;
+        text-align: center;
+    }
+
+    .product_details li {
+        margin: 0;
+    }
+
+    .product_features img{
+        width: 325px;
+    }
+    
+    #devices_img img {
+        width: 325px;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product_features_list ul{
+        gap: 2em;
+    }
+
+    .product_features_list li{
+        gap: 2em;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .footer_links ul{
+        text-align: center;
+    }
+
+    .footer_links li{
+        padding: 1em;
+    }
+
+    footer .footer_links {
+        display: block;
+    }
+
+    .logo_main {
+        margin-left: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+
+}
+
+
+@media screen and (min-width:600px) and (max-width:1200px) {
+
+    body {
+    }
+    .product_features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product_details {
+        text-align: center;
+    }
+
+    .product_details li {
+        margin: 3em auto;
+    }
+}
